@@ -43,6 +43,10 @@ function update(elapsedTime) {
   player.update(elapsedTime);
   snakes.forEach(function(snake) { snake.update(elapsedTime);});
   // TODO: Update the game objects
+  entities.collide(function(entity1, entity2){
+    entity1.color = "red";
+    entity2.color = "red";
+  })
 }
 
 /**
